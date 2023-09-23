@@ -3,27 +3,20 @@ import random
 def generate_secret():
     ''' Generates a 4 digit number with no repeat digits''
     It converts the number to a string and returns it'''
-   
-
-    #add your code here
 
     # list of potential digits
-    possible_digits = "0123456789"    
-    
     # sample ensures no repeated numbers
+    possible_digits = "0123456789"    
     secret = (random.sample(possible_digits,4))
     empty_string = ""
     secret = (empty_string.join(secret))
 
     return secret
 
-
 def how_many_bulls(guess,answer):
     ''' Returns the number of bulls as an int that the guess earns when the
     secret number is answer. answer and guess should be strings'''
    
-
-    #add your code here
     bulls = 0 
     
     # setting if conditions with accumulator 
@@ -39,19 +32,15 @@ def how_many_bulls(guess,answer):
 
     return bulls
 
-
-
 def how_many_cows(guess,answer):
     ''' Returns the number of cows as an int that the guess earns when the
     secret number is answer. answer and guess should be strings'''
    
-
-    #add your code here
     cows = 0 
     
     # setting mutiple if conditions 
     # is not in same position 
-    # and exist in other list 
+    # and exist in other lists 
     
     if guess[0] != answer[0] and answer[0]in guess:
         cows += 1
